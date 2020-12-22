@@ -1,0 +1,493 @@
+$spanColor:#707070;
+$textContentColor: #7E7E7E;
+$dividerColor : #007F3C;
+
+$robotoRegular : 'Roboto-Regular';
+$robotoBold : 'Roboto-Bold';
+
+$tableContentColor : #707070;
+$tableDividerColor : #007F3CBD;
+
+$chipColor : #008641;
+
+$sideNavBackground : #E4EBE6;
+
+$break-small: 500px;
+$break-550 : 550px;
+$break-mobile: 768px;
+$break-smallLaptop: 900px;
+$break-laptop: 1024px;
+$break-desktop-and-above: 1600px;
+
+// Compatability https://caniuse.com/?search=max-content
+
+@mixin respond-to($media) {
+    @if $media==smallMobile {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else if $media==fiveHalf {
+        @media only screen and (max-width: $break-550) {
+            @content;
+        }
+    }
+
+    @else if $media==mobile {
+        @media only screen and (max-width: $break-mobile) {
+            @content;
+        }
+    }
+
+    @else if $media==smallLaptop {
+        @media only screen and (max-width: $break-smallLaptop) {
+            @content;
+        }
+    }
+
+    @else if $media==laptop {
+        @media only screen and (max-width: $break-laptop) {
+            @content;
+        }
+    }
+
+    @else if $media==desktop {
+        @media only screen and (min-width: $break-desktop-and-above) {
+            @content;
+        }
+    }
+}
+
+html {
+    font-family: $robotoRegular;
+    height: 100%;
+}
+
+body {
+    background-color: #F5F5F5 !important;
+    height: 100vh;
+}
+
+.datepicker-controls .select-month input {
+    width: 80px !important;
+}
+
+.modal {
+    width: 470px !important;
+}
+
+.successToast {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+}
+
+.errorToast {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+}
+
+.noUnderline {
+    text-decoration: none;
+}
+
+.displayNone {
+    display: none;
+}
+
+.font-size-22 {
+    font-size: 22px !important;
+}
+
+.contentIndent {
+    margin-left: 30px;
+
+    @include respond-to(fiveHalf) {
+        margin-left: 10px;
+    }
+}
+
+.contentPadding {
+    padding-right: 30px;
+
+    @include respond-to(fiveHalf) {
+        padding-right: 10px;
+    }
+}
+
+.tinyIndent {
+    margin-left: 10px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.scrollBlock {
+    overflow: hidden;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.pageHeader {
+    position: relative;
+    z-index: 5;
+    height: 115px;
+    box-shadow: 0px 3px 6px #00000029;
+    background: white;
+
+    @include respond-to(mobile) {
+        height: 70px;
+    }
+
+    @include respond-to(laptop) {
+        height: 80px;
+    }
+
+    .pageHeaderWrapper {
+        display: block;
+        overflow: auto;
+        // max-width: 1024px;
+        // margin-left: auto;
+        // margin-right: auto;
+    }
+
+    .logo {
+        padding-top: 25px;
+        float: left;
+        width: 245px;
+        height: 65px;
+
+        @include respond-to(mobile) {
+            width: 180px;
+            padding-left: 0;
+            padding-top: 8px;
+        }
+
+        @include respond-to(laptop) {
+            width: 180px;
+            padding-left: 0;
+            padding-top: 12px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url("../img/top2.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .headerTitle {
+        display: block;
+        position: relative;
+        color: $spanColor;
+        font-size: 50px;
+        font-family: $robotoBold;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        width: fit-content;
+    }
+}
+
+.breadcrumbs {
+    display: block;
+    overflow: auto;
+    position: relative;
+    left: 10px;
+    margin-bottom: 15px;
+
+    a {
+        // display: block;
+        overflow: auto;
+    }
+
+    span {
+        float: left;
+        color: #A8A8A8;
+        font-family: $robotoBold;
+        border-bottom: 0px solid #A8A8A8;
+        transition: border-bottom 2.25s;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #A8A8A8;
+            transition: width .3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    .bcItem {
+        overflow: auto;
+        float: left;
+    }
+
+    .bcIconWrapper {
+        padding: 0 0 20px 0;
+        float: left;
+    }
+
+    .bcIcon {
+        position: relative;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        float: left;
+        margin: 0 5px;
+        background: url("../img/right-arrow.png");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.banner {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px 20px 20px 50px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0px 3px 3px #00000029;
+
+    @include respond-to(fiveHalf) {
+        padding: 20px 20px 20px 30px;
+    }
+
+    .bannerTag {
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        background-color: #FFE11C;
+        top: 0;
+        left: 0;
+    }
+
+    span {
+        font-family: $robotoBold;
+        color: #3A3A3ACC;
+    }
+}
+
+.content {
+    width: 100%;
+    height: calc(100% - 115px);
+
+    .hotelCard {
+        background-color: #fff;
+        overflow: hidden;
+        margin: 0 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+        min-height: 660px;
+
+        .leftPane {
+            width: 50%;
+            float: left;
+            height: 660px;
+            padding: 10px;
+            border-radius: 10px;
+    
+            .mainPhotoWrapper {
+                width: 75%;
+                height: 100%;
+                float: left;
+    
+                .photo {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    background: url("../img/main_Maldives.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 25px 0 0 25px;
+                }
+            }
+    
+            .secondaryPhotosWrapper {
+                width: 25%;
+                height: 100%;
+                float: left;
+    
+                .photo {
+                    position: relative;
+                    width: 100%;
+                    height: calc((100% - 10px) / 3);
+                    float: left;
+                    margin: 0 0 5px 5px;
+                }
+    
+                .first {
+                    background: url("../img/secondary_Maldives_1.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 0 25px 0 0;
+                }
+    
+                .second {
+                    background: url("../img/secondary_Maldives_2.jpg");
+                    background-position: center;
+                    background-size: cover;
+                }
+    
+                .third {
+                    background: url("../img/secondary_Maldives_3.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 0 0 25px 0;
+                }
+            }
+        }
+
+        .rightPane {
+            width: 50%;
+            float: left;
+            padding: 10px;
+            padding-left: 30px;
+
+            .starRatingWrapper {
+                width: 110px;
+                float: left;
+                height: 20px;
+
+                .stars {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    background: url("../img/fiveStars.png");
+                    background-position: center;
+                    background-size: cover;
+                }
+    
+            }
+
+            .infoPanel {
+                .titleSpan {
+                    width: 100%;
+                    float: left;
+                    color: rgba(0, 0, 0, 0.8);
+                    font-size: 30px;
+                    font-family: $robotoBold;
+                }
+
+                .ratingWrapper {
+                    .ratingBox {
+                        width: 40px;
+                        height: 30px;
+                        float: left;
+                        margin-right: 20px;
+                        background-color: #e4e4e4;
+                        text-align: center;
+                        color: $chipColor;
+                        font-size: 20px;
+                        font-family: $robotoBold;
+                    }
+                }
+
+                .personWrapper {
+                    width: 100%;
+                    float: left;
+                    margin-top: 10px;
+                    .person {
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                        background: url("../img/users.png");
+                        background-position: center;
+                        background-size: cover;
+                        margin-right: 10px;
+                    }
+                }
+
+                .rooms {
+                    width: 100%;
+                    float: left;
+                    position: relative;
+                    margin-top: 20px;
+                    .room {
+                        position: relative;
+                        width: 100%;
+                        padding: 15px;
+                        // height: 100px;
+                        margin-bottom: 20px;
+                        float: left;
+                        border-radius: 20px;
+                        box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+
+                        .titleSection {
+                            height: 100%;
+                            width: 25%;
+                            float: left;
+                            margin-right: 10px;
+                        }
+                        .roomTitle {
+                            font-size: 22px;
+                            font-family: $robotoBold;
+                            color: rgba(0, 0, 0, 0.8);
+                        }
+
+                        .additionalText {
+                            color: #24a0ed;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            font-family: $robotoBold;
+                            margin-top: 10px;
+                        }
+
+                        .chipsWrapper {
+                            width: 45%;
+                        }
+
+                        .buttonSection {
+                            width: 25%;
+                            padding: 5px;
+                            float: right;
+                            margin-top: 5px;
+                            
+                            .reserveButton {
+                                height: 50px;
+                                background-color: #24a0ed;
+                                border-radius: 20px;
+                                text-align: center;
+                                padding-top: 10px;
+                                cursor: pointer;
+
+                                span {
+                                    color: white;
+                                    font-size: 20px;
+                                    font-family: $robotoBold;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #map {
+                    float: left;
+                    width: 100%;
+                    height: 240px;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+}

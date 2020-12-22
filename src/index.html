@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css"
+        href="resources/fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsKHEe7g5y5BMyQp-xIu40a4DHQg5vUz0&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    <script src="./resources/js/script.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+    <title>Blockchain Hotel</title>
+</head>
+
+<body>
+    <div class="pageHeader">
+        <div class="pageHeaderWrapper">
+            <div class="headerTitle">
+                <span>Blockchain Hotel</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="hotelCard">
+            <div class="leftPane">
+                <div class="mainPhotoWrapper">
+                    <div class="photo"></div>
+                </div>
+                <div class="secondaryPhotosWrapper">
+                    <div class="photo first"></div>
+                    <div class="photo second"></div>
+                    <div class="photo third"></div>
+                </div>
+            </div>
+            <div class="rightPane">
+                <div class="starRatingWrapper">
+                    <div class="stars"></div>
+                </div>
+                <div class="infoPanel">
+                    <div class="titleSpan"><span>Sun Siyam Iru Fushi Maldives</span></div>
+                    <div class="ratingWrapper">
+                        <div class="ratingBox"><span>9.4</span></div>
+                    </div>
+                    <div class="chipsWrapper left">
+                        <div class="chipWrap left">
+                            <a class="noUnderline"><span class="chip">"Great coffee!"</span></a>
+                        </div>
+                        <div class="chipWrap left">
+                            <a class="noUnderline"><span class="chip">"Awesome entertainment!"</span></a>
+                        </div>
+                        <div class="chipWrap left">
+                            <a class="noUnderline"><span class="chip">"Great location!"</span></a>
+                        </div>
+                        <div class="chipWrap left">
+                            <a class="noUnderline"><span class="chip">"Best choice!"</span></a>
+                        </div>
+                    </div>
+                    <div class="personWrapper">
+                        <div class="person"></div>
+                        <span>2 Persons</span>
+                    </div>
+                    <div class="rooms">
+                        <div class="room">
+                            <div class="titleSection">
+                                <div class="roomTitle">
+                                    <span>Basic</span>
+                                </div>
+                                <div class="additionalText">
+                                    <span>Best value for money!</span>
+                                </div>
+                            </div>
+                            <div class="chipsWrapper left">
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Free Wifi</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Breakfast</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Dinner</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Refundable until last week</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Mini Bar</span></a>
+                                </div>
+                            </div>
+                            <div class="buttonSection">
+                                <div id="typeBasic" class="reserveButton modal-trigger" data-target="modal1"><span>Reserve a date!</span></div>
+                            </div>
+                        </div>
+                        <div class="room">
+                            <div class="titleSection">
+                                <div class="roomTitle">
+                                    <span>Deluxe</span>
+                                </div>
+                                <div class="additionalText">
+                                    <span>Best comfort!</span>
+                                </div>
+                            </div>
+                            <div class="chipsWrapper left">
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Free Wifi</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Refundable until last day</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">All inclusive</span></a>
+                                </div>
+                                <div class="chipWrap left">
+                                    <a class="noUnderline"><span class="chip">Free drinks at the Bar</span></a>
+                                </div>
+                            </div>
+                            <div class="buttonSection">
+                                <div id="typeDeluxe" class="reserveButton modal-trigger" data-target="modal1"><span>Reserve a
+                                        date!</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="card-content">
+                <div class="row center-align">
+                    <span class="card-title grey-text text-darken-4 center-align" style="font-size: 20px;">Reservation Form</span>
+                </div>
+                
+                <div class="row center-align">
+                    <div class="input-field col s6">
+                        <input required="true" placeholder="First Name" id="first_name" type="text" class="validate">
+                        <label for="first_name">Enter your first name</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input required="true" placeholder="Last Name" id="last_name" type="text" class="validate">
+                        <label for="last_name">Enter your last name</label>
+                      </div>
+                </div>
+                <div class="row center-align">
+                    <div class="input-field col s12">
+                        <input required="true" id="address" type='text' class="validate left-align" placeholder="Address" />
+                        <label for="address" class="left-align">Enter your address</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input required="true" id="email" type='email' name='email' class="validate left-align" placeholder="Email" />
+                        <label for="email" class="left-align">Enter your email</label>
+                    </div>
+                </div>
+                <div class="row center-align">
+                    <span class="card-title grey-text text-darken-4 center-align" style="font-size: 20px;">Reserve a Room</span>
+                </div>
+                <div class="row center-align">
+                    <div class="input-field col s6">
+                        <input required="true" type="text" class="datepicker" id="date_from" placeholder="From...">
+                        <label for="date_from" class="left-align">Enter date from</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input required="true" type="text" class="datepicker" id="date_to" placeholder="To...">
+                        <label for="date_to" class="left-align">Enter date to</label>
+                    </div>
+                </div>
+                <div class="row left-align" style="margin-left: 10px; margin-bottom: 0;">
+                    <span class="card-title grey-text text-darken-5 center-align" style="font-size: 22px;">Price :</span>
+                    <span id="price" class="card-title grey-text text-darken-5 center-align" style="font-size: 14px;">Please select dates.</span>
+                </div>
+                <div class="row left-align" style="margin-left: 10px; margin-bottom: 0;">
+                    <span class="card-title grey-text text-darken-5 center-align" style="font-size: 22px;">Price per night:</span>
+                    <span id="pricePerNightBasic" class="card-title grey-text text-darken-4 center-align" style="font-size: 18px;"></span>
+                    <span id="pricePerNightDeluxe" class="card-title grey-text text-darken-4 center-align" style="font-size: 18px;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="sendToContract" onclick="" class="displayNone">Submit Reservation</a>
+            <a id="submitReservationBtn" class="waves-effect waves-green btn-flat">Submit Reservation</a>
+        </div>
+    </div>
+
+    <input id="reservedDatesBasic" type="hidden" value=""/>
+    <input id="reservedDatesDeluxe" type="hidden" value=""/>
+</body>
+</html>

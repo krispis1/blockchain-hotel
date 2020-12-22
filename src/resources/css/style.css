@@ -1,0 +1,447 @@
+html {
+  font-family: "Roboto-Regular";
+  height: 100%;
+}
+
+body {
+  background-color: #F5F5F5 !important;
+  height: 100vh;
+}
+
+.datepicker-controls .select-month input {
+  width: 80px !important;
+}
+
+.modal {
+  width: 470px !important;
+}
+
+.successToast {
+  background-color: #d4edda !important;
+  color: #155724 !important;
+}
+
+.errorToast {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+}
+
+.noUnderline {
+  text-decoration: none;
+}
+
+.displayNone {
+  display: none;
+}
+
+.font-size-22 {
+  font-size: 22px !important;
+}
+
+.contentIndent {
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 550px) {
+  .contentIndent {
+    margin-left: 10px;
+  }
+}
+
+.contentPadding {
+  padding-right: 30px;
+}
+
+@media only screen and (max-width: 550px) {
+  .contentPadding {
+    padding-right: 10px;
+  }
+}
+
+.tinyIndent {
+  margin-left: 10px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.scrollBlock {
+  overflow: hidden;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.pageHeader {
+  position: relative;
+  z-index: 5;
+  height: 115px;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  background: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .pageHeader {
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pageHeader {
+    height: 80px;
+  }
+}
+
+.pageHeader .pageHeaderWrapper {
+  display: block;
+  overflow: auto;
+}
+
+.pageHeader .logo {
+  padding-top: 25px;
+  float: left;
+  width: 245px;
+  height: 65px;
+}
+
+@media only screen and (max-width: 768px) {
+  .pageHeader .logo {
+    width: 180px;
+    padding-left: 0;
+    padding-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pageHeader .logo {
+    width: 180px;
+    padding-left: 0;
+    padding-top: 12px;
+  }
+}
+
+.pageHeader .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/top2.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pageHeader .headerTitle {
+  display: block;
+  position: relative;
+  color: #707070;
+  font-size: 50px;
+  font-family: "Roboto-Bold";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.breadcrumbs {
+  display: block;
+  overflow: auto;
+  position: relative;
+  left: 10px;
+  margin-bottom: 15px;
+}
+
+.breadcrumbs a {
+  overflow: auto;
+}
+
+.breadcrumbs span {
+  float: left;
+  color: #A8A8A8;
+  font-family: "Roboto-Bold";
+  border-bottom: 0px solid #A8A8A8;
+  -webkit-transition: border-bottom 2.25s;
+  transition: border-bottom 2.25s;
+}
+
+.breadcrumbs span:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #A8A8A8;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.breadcrumbs span:hover::after {
+  width: 100%;
+}
+
+.breadcrumbs .bcItem {
+  overflow: auto;
+  float: left;
+}
+
+.breadcrumbs .bcIconWrapper {
+  padding: 0 0 20px 0;
+  float: left;
+}
+
+.breadcrumbs .bcIcon {
+  position: relative;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin: 0 5px;
+  background: url("../img/right-arrow.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.banner {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px 20px 20px 50px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 3px #00000029;
+          box-shadow: 0px 3px 3px #00000029;
+}
+
+@media only screen and (max-width: 550px) {
+  .banner {
+    padding: 20px 20px 20px 30px;
+  }
+}
+
+.banner .bannerTag {
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  background-color: #FFE11C;
+  top: 0;
+  left: 0;
+}
+
+.banner span {
+  font-family: "Roboto-Bold";
+  color: #3A3A3ACC;
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 115px);
+}
+
+.content .hotelCard {
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  min-height: 660px;
+}
+
+.content .hotelCard .leftPane {
+  width: 50%;
+  float: left;
+  height: 660px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.content .hotelCard .leftPane .mainPhotoWrapper {
+  width: 75%;
+  height: 100%;
+  float: left;
+}
+
+.content .hotelCard .leftPane .mainPhotoWrapper .photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: url("../img/main_Maldives.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px 0 0 25px;
+}
+
+.content .hotelCard .leftPane .secondaryPhotosWrapper {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+
+.content .hotelCard .leftPane .secondaryPhotosWrapper .photo {
+  position: relative;
+  width: 100%;
+  height: calc((100% - 10px) / 3);
+  float: left;
+  margin: 0 0 5px 5px;
+}
+
+.content .hotelCard .leftPane .secondaryPhotosWrapper .first {
+  background: url("../img/secondary_Maldives_1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 25px 0 0;
+}
+
+.content .hotelCard .leftPane .secondaryPhotosWrapper .second {
+  background: url("../img/secondary_Maldives_2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.content .hotelCard .leftPane .secondaryPhotosWrapper .third {
+  background: url("../img/secondary_Maldives_3.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 0 25px 0;
+}
+
+.content .hotelCard .rightPane {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.content .hotelCard .rightPane .starRatingWrapper {
+  width: 110px;
+  float: left;
+  height: 20px;
+}
+
+.content .hotelCard .rightPane .starRatingWrapper .stars {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: url("../img/fiveStars.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.content .hotelCard .rightPane .infoPanel .titleSpan {
+  width: 100%;
+  float: left;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  font-family: "Roboto-Bold";
+}
+
+.content .hotelCard .rightPane .infoPanel .ratingWrapper .ratingBox {
+  width: 40px;
+  height: 30px;
+  float: left;
+  margin-right: 20px;
+  background-color: #e4e4e4;
+  text-align: center;
+  color: #008641;
+  font-size: 20px;
+  font-family: "Roboto-Bold";
+}
+
+.content .hotelCard .rightPane .infoPanel .personWrapper {
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+}
+
+.content .hotelCard .rightPane .infoPanel .personWrapper .person {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url("../img/users.png");
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms {
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-top: 20px;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  float: left;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .titleSection {
+  height: 100%;
+  width: 25%;
+  float: left;
+  margin-right: 10px;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .roomTitle {
+  font-size: 22px;
+  font-family: "Roboto-Bold";
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .additionalText {
+  color: #24a0ed;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Roboto-Bold";
+  margin-top: 10px;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .chipsWrapper {
+  width: 45%;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .buttonSection {
+  width: 25%;
+  padding: 5px;
+  float: right;
+  margin-top: 5px;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .buttonSection .reserveButton {
+  height: 50px;
+  background-color: #24a0ed;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.content .hotelCard .rightPane .infoPanel .rooms .room .buttonSection .reserveButton span {
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto-Bold";
+}
+
+.content .hotelCard .rightPane .infoPanel #map {
+  float: left;
+  width: 100%;
+  height: 240px;
+  border-radius: 15px;
+}
+/*# sourceMappingURL=style.css.map */
