@@ -16,7 +16,7 @@ Verslo planas:
 - Sistemos naudotojas pasirenka kambarį už tam tikrą ir pasirenka norimą rezervacijos datą.
 - Patvirtinus rezervaciją atliekamas mokėjimas, po kurio norima data išsaugoma blockchain'e.
 
-Applikacijos pasileidimo instrukcijos :
+Aplikacijos pasileidimo instrukcijos :
 1) Atsiklonuokite repozitoriją.
 2) Įsirašykite Metamask papildinį jūsų pasirinktoje naršyklėje.
 3) Įsidiekite Ganache aplikaciją ir pasileiskite testinį blockchain'ą lokaliame tinkle.
