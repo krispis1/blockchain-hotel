@@ -8,7 +8,7 @@ Back-end'ui sukurti naudojome Javascript'ą kuris, kaip minėjome, sukasi vartot
 Smart Contract'o kūrimui naudojome Solidity, kuris veikia  lokalaus Ethereum tinklo. Smart Contract'ui įgyvendinti buvo pasitelkta Truffle kūrimo aplinka, padėjusi sukompiliuoti kontraktą bei parašyti testus.
 
 Testų rezultatai:
-![Test results](https://prnt.sc/w8ez1h)
+![Test results](https://i.imgur.com/WAGfyyH.png)
 
 
 Verslo planas:
