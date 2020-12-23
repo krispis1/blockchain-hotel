@@ -3,9 +3,9 @@ Aplikacija susideda iš trijų komponentų - Front-end'o, Back-end'o (kuris mūs
 
 Front-end'o struktūrai ir stilizavimui naudojome HTML5, CSS3, SASS, logikai - Javascriptą. Taip pat naudojome Materialize UI karkasą, kuris palengvino formų bei dialogų kūrimo procesą.
 
-Back-end'ui sukurti naudojome Javascript'ą kuris, kaip minėjome, sukasi vartotojo naršyklėje. Šio sistemos komponento pagrindinė funkcija yra užtikrinti komunikaciją tarp front-end'o ir Smart Contract'u.
+Back-end'ui sukurti naudojome Javascript'ą kuris, kaip minėjome, sukasi vartotojo naršyklėje. Šio sistemos komponento pagrindinė funkcija yra užtikrinti komunikaciją tarp front-end'o ir Smart Contract'o.
 
-Smart Contract'o kūrimui naudojome Solidity, kuris veikia  lokalaus Ethereum tinklo. Smart Contract'ui įgyvendinti buvo pasitelkta Truffle kūrimo aplinka, padėjusi sukompiliuoti kontraktą bei parašyti testus.
+Smart Contract'o kūrimui naudojome Solidity, kuris veikia lokaliame Ethereum tinkle. Smart Contract'ui įgyvendinti buvo pasitelkta Truffle kūrimo aplinka, padėjusi sukompiliuoti kontraktą bei parašyti testus.
 
 Testų rezultatai:
 ![Test results](https://i.imgur.com/WAGfyyH.png)
